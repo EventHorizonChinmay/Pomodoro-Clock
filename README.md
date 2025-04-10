@@ -17,6 +17,22 @@ The **Pomodoro Technique** is a time management method that uses 25-minute focus
 - 📊 Visual Progress Bar
 - 🧮 Tracks Completed Cycles
 
+🧾 How to Use
+- Click Start to begin the timer.
+- Use Pause to stop temporarily, or Reset to restart.
+- Timer will switch between Work and Break sessions automatically.
+- When a work session ends, a sound will play and a notification pops up.
+- After X cycles, you'll get a long break.
+
+⚙️ Customizing Intervals
+You can change durations anytime via the inputs above the timer.
+- Work (min) – Set your work session duration
+- Break (min) – Short break duration after each session
+- Long break (min) – Longer rest after several cycles
+- Long break cycles – How many sessions before a long break
+- Click Apply after changing values to update the timer.
+
+
 ## ⚙️ Tech Stack
 - React + TypeScript
 - Plain CSS (no frameworks)
