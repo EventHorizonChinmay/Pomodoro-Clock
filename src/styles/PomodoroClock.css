@@ -1,0 +1,257 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.pomodoro {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-bg, #ffffff);
+  color: var(--header-text, #000);
+  padding: 15px 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-height: 70px;
+  border-radius: 20px;
+}
+
+.header.dark {
+  --header-bg: #1e1e1e;
+  --header-text: #fff;
+}
+
+.header > div {
+  flex: 1;
+  text-align: center;
+}
+
+.header > div:first-child {
+  text-align: left;
+}
+
+.header > div:last-child {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.clock-display {
+  font-size: 1.1rem;
+  font-family: monospace;
+}
+
+.analog-clock {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #b5acac;
+  border-radius: 50%;
+  position: relative;
+  background-color: #fff;
+}
+
+.analog-clock .hand {
+  position: absolute;
+  transform-origin: left center;
+  top: 50%;
+  left: 50%;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.hand.hour {
+  width: 30%;
+  height: 3px;
+  background-color: #222;
+}
+
+.hand.minute {
+  width: 45%;
+  height: 2px;
+  background-color: #666;
+}
+
+.hand.second {
+  width: 48%;
+  height: 1px;
+  background-color: red;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.header-buttons button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.settings {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.settings label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.settings input {
+  margin-top: 5px;
+  padding: 6px;
+  font-size: 1rem;
+  width: 80px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.apply-btn {
+  padding: 8px 16px;
+  background-color: #007bff;
+  width: 100px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.apply-btn:hover {
+  background-color: #0069d9;
+}
+
+.layout {
+  margin-top: 50px;
+  .timer-container {
+    margin-bottom: 50px;
+  }
+}
+
+.cycles {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+}
+.cycles .dark {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.mode {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.timer {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons button:first-child {
+  background-color: #28a745;
+  color: white;
+}
+
+.buttons button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.buttons button:hover {
+  opacity: 0.9;
+}
+
+body.light {
+  background-color: #f0f2f5;
+  color: #000;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: #fff;
+  .header {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-bar .fill {
+  height: 100%;
+  background-color: #007bff;
+  transition: width 0.5s ease;
+}
+
+.footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-bg, #ffffff);
+  color: var(--header-text, #000);
+  padding: 15px 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  height: 70px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.footer.dark {
+  background-color: transparent;
+  --header-text: #fff;
+}
